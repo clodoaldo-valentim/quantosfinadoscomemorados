@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Funerária</title>
+</head>
+<body>
+<script>
+	var usuario;
+	var quantidade;
+	var defunto = 387;
+	var lucro;
+	var finados;
+	var anoatual;
+	var ano;
+	document.write("Seja Bem vindo!<br><br>");
+	document.write("Funerária Só falta você<br><br>");
+	usuario = window.prompt("Informe o tipo de usuário, se Administrador ou Defunto<br><br>");	
+	switch(usuario){
+	case "Administrador":
+		quantidade = window.prompt("Bem vindo administrador! Digite a quantidade de defuntos para calcular o lucro <br><br>");
+		lucro = quantidade*defunto;
+		document.write("Seu lucro é: R$ " + lucro + "<br><br>");
+		document.write("Agradecemos a preferência");
+		break;
+	case "Defunto":
+		ano = window.prompt("Bem vindo, defunto! Digite o ano em que você morreu, para calcular quantos dias de finados você já comemorou<br><br>");
+		anoatual = window.prompt("Digite o ano atual<br><br>");
+		finados = anoatual-ano;
+		document.write("Você já comemorou " + finados + " dias de finados"+"<br><br>");
+		document.write("Agradecemos a preferência");
+		break;
+	default: document.write("Desculpa, usuário não encontrado");
+	}
+</script>
+</body>
+</html>
